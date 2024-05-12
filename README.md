@@ -5,7 +5,9 @@ The Book Store Management System is a web-based application developed to streaml
 **Technologies Used**
 
 Frontend: HTML, CSS, Bootstrap, JavaScript
+
 Backend: ASP.NET, C#
+
 Database: SQL Server (or any preferred RDBMS)
 
 
