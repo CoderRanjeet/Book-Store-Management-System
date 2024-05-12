@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BookStore.master.cs" Inherits="BookStore.BookStore" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: cursive;
+        }
+
+        a.nav-link {
+            color: black !important;
+            font-size: 16px;
+            font-family: cursive;
+        }
+
+        p.card-text {
+            line-height: 30px;
+        }
+
+        li.nav-item {
+            padding: 6px 12px !important;
+        }
+
+        .read_more_btn {
+            color: #fff;
+            background-color: #de2454;
+            border-color: #de2454;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .jumbotron.jumbotron-fluid.text-white {
+            background-image: url("https://us.123rf.com/450wm/serg1978/serg19782305/serg1978230500335/204073985-number-of-old-ancient-books-library-of-knowledge-textbooks-black-background-isolate-header-banner.jpg?ver=6");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10rem;
+        }
+
+        .jumbotron.jumbotron-fluid.text-white {
+            position: relative;
+        }
+
+            .jumbotron.jumbotron-fluid.text-white h3 {
+                font-family: cursive;
+            }
+
+
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav {
+                margin-left: auto !important;
+            }
+        }
+
+        footer.bg-dark.pt-5.pb-4 {
+            color: white;
+        }
+
+            footer.bg-dark.pt-5.pb-4 ul li a {
+                color: white;
+            }
+
+                footer.bg-dark.pt-5.pb-4 ul li a:hover {
+                    text-decoration: none;
+                }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+          <!-- Navbar -->
+        <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="Images/logo.png" style="width: 100px;" class="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Dashboard.aspx">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ShoppingStore.aspx">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.aspx">Cart</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="Orders.aspx">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Admin.aspx">Admin</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <asp:Button Text="Log Out" ID="BtnLogOut" CssClass="read_more_btn " OnClick="BtnLogOut_Click" runat="server" /></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+          <!-- Footer -->
+        <footer class="bg-dark pt-5 pb-4">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <h5>Company</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Resources</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Contact</h5>
+                        <ul class="list-unstyled">
+                            <li>1-234-567-8900</li>
+                            <li>info@bookstore.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        Copyright © 2022 My Book Store
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/popper.js"></script>
+        <script src="Scripts/popper-utils.min.js"></script>
+        <script src="Scripts/jquery-3.0.0.min.js"></script>
+        <script src="Scripts/bootstrap.bundle.min.js"></script>
+        <script src="Scripts/jquery-3.1.0.js"></script>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/popper.min.js"></script>
+        <script src="Scripts/jquery-3.1.0.min.js"></script>
+
+    </form>
+</body>
+</html>
